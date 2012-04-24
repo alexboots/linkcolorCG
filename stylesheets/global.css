@@ -1,0 +1,885 @@
+
+@charset "UTF-8";
+@import url("reset.css");
+
+/* -----------------------------------------------------------
+
+- Title: Coupon Gurus Main Stylesheet
+- Author: Andres Rojas (http://koombea.com)
+- Design by: Diego Barrera (http://koombea.com)
+
+----------------------------------------------------------- */
+
+/* Helpers
+============================================================ */
+.clearfix:before,
+.clearfix:after{content:""; display:table;}
+.clearfix:after{clear:both;}
+.clearfix{zoom:1; overflow:visible !important;}
+
+.clear{clear:left;}
+
+.floatleft{float:left !important;}
+.floatright{float:right !important;}
+.floatcenter{
+  float:none !important;
+	margin-left:auto !important;
+	margin-right:auto !important;
+	overflow:hidden;
+}
+
+.alignleft{text-align:left !important;}
+.alignright{text-align:right !important;}
+.aligncenter{text-align:center !important;}
+
+/* General
+============================================================ */
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body#landing_2  
+{
+	/*background:url(<%= asset_path 'bg.png') repeat-x;*/
+	  background:url('../images/backgrounds/bg.png') repeat-x;
+}
+
+html{overflow-y:auto;}
+
+#wrapper{
+
+}
+
+p{
+  line-height:1.2em;
+  margin-bottom:1em;
+}
+
+a{
+	-moz-transition:color 0.1s linear;
+	-webkit-transition:color 0.1s linear;
+	transition:color 0.1s linear;
+}
+
+a:hover{
+	
+}
+
+/* Header
+============================================================ */
+#header{
+  margin:10px auto 15px;
+  padding:0 20px 0 10px;
+  width:910px;
+}
+
+#logo{
+  float:left;
+  text-align:center;
+  width:380px;
+}
+
+#header nav{
+  float:left;
+  margin:45px 0 0 0; 
+  width:270px;
+}
+
+#header nav li,
+#header nav a{
+  color:#4B93AD;
+  display:inline-block;
+  font-size:14px;
+  text-align:center;
+  text-decoration:none;
+  width:50px;
+}
+
+#header nav li,
+#header nav a{float:left;}
+
+#header nav li{margin-right:25px;}
+#header nav li:last-child{margin-right:0px;}
+
+#header nav a{
+  background:url("../images/icons/nav-icons.png") top no-repeat;
+  padding:46px 13px 15px;
+}
+
+.ie6 #header nav a
+{
+	padding:46px 10px 10px;	
+}
+
+#header nav a.stores-icon{background-position:center -60px;}
+#header nav a.popular-icon{background-position:center 5px;}
+#header nav a.blog-icon{background-position:center -137px;}
+
+#header nav a:hover{color:#fff;}
+
+#header nav a.stores-icon:hover{background-position:center -363px;}
+#header nav a.popular-icon:hover{background-position:center -225px;}
+#header nav a.blog-icon:hover{background-position:center -502px;}
+
+#mail-section-main-wrapper
+{
+	min-width:274px;
+	position:relative;
+	margin: 71px auto auto 656px;
+}
+
+.ie6 #mail-section-main-wrapper
+{
+	width:400px;
+}
+.ie6 #mail-section-main-wrapper,
+.ie7 #mail-section-main-wrapper
+{
+	margin: -60px auto auto 656px;	
+}
+
+
+	.mail-section-main{
+      background:#fff url("../images/backgrounds/gray-effect.png") top no-repeat;
+	  border: 0px;
+	  padding: 0px;	
+      float:right;
+	}
+
+
+	.mail-section-main .text{
+	  -webkit-box-shadow:1px 1px 0 #D1D1D1;
+	  -moz-box-shadow:1px 1px 0 #D1D1D1;
+	  box-shadow:1px 1px 0 #D1D1D1; /* from #EBEBEB */
+	  margin-right:10px;
+	  width:202px;
+	}
+	
+	.ie6 .mail-section-main .text,
+	.ie7 .mail-section-main .text
+	{
+		margin-right:0px;
+		width:190px;
+	}
+
+
+		.submit-main{ 
+		  background-position:bottom left; 
+		  float:left; 
+		  width:62px;
+		}
+		
+		.submit-main input{
+		  background-position:bottom right;
+		  float:right;
+		  margin-top:0px;
+		  padding:7px 12px 7px 10px;
+		}
+
+		a{text-decoration:none !important;}
+
+		.ie8.popup .submit-main input{
+		  padding:8px 12px 6px 10px;
+		}
+
+		.ie7.popup .submit-main input{
+		  margin-top:0px !important; 
+		  padding:5px 12px 6px 10px !important;
+		}
+		
+		/*move to buttons */
+			
+		.submit-main{
+		  /* background:url("../images/buttons/lighter-green.png") bottom left no-repeat; -- removed left side of button so subscribe can slip nicely over input box*/
+		  display:inline-block;
+		  padding-left:0px;
+		}
+
+
+
+		.ie8 .submit-main input{float:right; padding:8px 12px 5px 10px;}
+
+		.ie7 .submit-main{float:left; width:76px;}
+		.ie7 .submit-main input{float:right; padding:8px 12px 5px 10px;}
+
+		.submit-main input
+		{			
+		  background:url("../images/buttons/lighter-green.png") bottom right no-repeat;
+		  color:#fff;
+	   	  height:32px;
+		  display:inline-block;
+		  font-family:"Myriad Pro", Arial, sans-serif;
+		  font-size:13px;
+		  line-height:1;
+		  padding:8px 11px 6px 10px;
+		  text-shadow:0 1px 0 #999;
+		  text-shadow:0 1px 0 rgba(0, 0, 0, .30);			
+		}
+		
+		   .mail-section-main .text{
+			  -moz-box-sizing:border-box;
+			  -webkit-box-sizing:border-box;
+			  box-sizing:border-box;
+			}
+		
+				.mail-section-main .text{
+				  -webkit-border-radius:5px;
+				  -moz-border-radius:5px;
+				  border-radius:3px;
+				
+				  border:1px solid #ECEDED;
+				  color:#A8A8A8;
+				  float:left;
+				  font-size:12px;
+				  font-weight:normal;
+				  line-height:1.2;
+				  padding:9px 0px 5px 5px;
+				}
+				
+				.ie9 .mail-section-main .text{
+					font-size:12px;
+				}
+				
+			
+				.mail-section-main .ie7 .text{
+				  width:90%;
+				}			
+		
+				.mail-section-main .text::-webkit-input-placeholder {
+				   color:#CACACA;
+				   font-size:12px;
+				   font-weight:normal;
+				   line-height:1.2;
+				}
+
+				.mail-section-main .text:-moz-placeholder {
+				   color:#CACACA;
+				   font-size:12px;
+				   font-weight:normal;
+				   line-height:1.2;
+				}				
+
+				
+		/**********/
+			
+
+#header .follows{
+  float:left;
+  margin-top:15px;
+  width:100%;
+}
+
+.follows .list-label{
+  color:#0D9CF3;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:13px;
+  margin-right:5px;
+  position: relative;
+  top:2px;
+  vertical-align:middle;
+}
+
+.fb-icon, .tw-icon{
+  background:url("../images/icons/social-icons.png");
+  float:right;
+  height:25px;
+  margin-right:5px;
+  vertical-align:middle;
+  width:26px;
+}
+
+.fb-icon{background-position: top;}
+.tw-icon{background-position: bottom;}
+
+
+.linkToStore-Top a /* ah */
+{
+	position: absolute;
+	margin-top:35px;
+	
+	display: block;
+	clear:both;
+	padding:6px 0 0 5px;
+	text-decoration: underline!important;
+	color:#fff;
+    font-size:12px;
+    font-weight: 300;
+    line-height:1.2;
+    text-shadow:1px 1px 0 #333;
+    text-shadow:1px 1px 0 rgba(0, 0, 0, .35);
+}
+
+.ie6 .linkToStore-Top a,  /* ah */
+.ie7 .linkToStore-Top a
+{
+	margin-top:-44px;
+}
+
+
+.linkToStore-Top a:hover /* ah */
+{
+	color:#eee;
+}
+
+/* Content
+============================================================ */
+#content{
+  background:url("../images/backgrounds/green-texture.jpg") repeat;
+  border:1px solid #ECEEEE;
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  border-radius:10px;
+  margin:0 auto 0;
+  padding-bottom:20px;
+  width:940px;
+
+  behavior: url(PIE.htc); /* ah */
+}
+
+#content .coupons:first-child header, #content .coupons:last-child{border:none;}
+
+.coupons header{
+  background:url("../images/backgrounds/dash.png") right bottom repeat-x;
+  border-top:1px solid #6692A5;
+  padding:22px 40px;
+}
+
+
+
+	.coupons header .social-box{
+	  background:url("../images/backgrounds/blue-gradient-long.png") repeat-x;
+	  border-radius:6px;
+	  -webkit-box-shadow:1px 1px 0px 0px #5F8CA0;
+	  -moz-box-shadow:1px 1px 0px 0px #5F8CA0;
+	  box-shadow:1px 1px 0px 0px #5F8CA0;
+	  color:#fff;
+	  float:right;
+	  font-size:12px;
+	  font-weight:lighter;
+	  padding:5px 7px;
+	  height:52px;
+	  width:176px;
+	}
+
+	.coupons header .social-box span{
+	  float:right;
+	  margin-top:4px;
+	}
+
+	.coupons header .social-box .fb-like{
+	  background:url("../images/icons/fb-like.png") no-repeat;
+	  float:left;
+	  padding:10px 23px 10px 24px;
+	}
+
+		.coupons header .social-box .twitter-follow-button{ /*ah */	  
+			padding-top:10px;			
+		}
+		
+.coupons header h2 {
+  color:#fff;
+  float:left;
+  font-size:25px; 
+  font-weight:bold;
+  line-height:1.2;
+  text-shadow:1px 1px 0 #333;
+  text-shadow:1px 1px 0 rgba(0, 0, 0, .35);
+}
+
+.coupons header h2 a{
+  color:#fff;
+  float:left;
+  font-size:32px; /* up from 25 */
+  font-weight:bold;
+  line-height:1.2;
+	text-decoration:none!important;
+  text-shadow:1px 1px 0 #333;
+  text-shadow:1px 1px 0 rgba(0, 0, 0, .35);
+}
+
+
+	.coupons header h2 a:hover { /*ah*/
+	  text-decoration:underline!important;
+	}
+
+.coupons{border-bottom:1px solid #376071;}
+
+.coupons-row{
+  background:url("../images/backgrounds/dash.png") right bottom repeat-x;
+  padding:0 30px;
+}
+
+.coupons-row.last{background:none;}
+
+.coupons-row .column{
+  background:url("../images/backgrounds/vertical-dash.png") right top repeat-y;
+  margin:0;
+  padding:20px 10px;
+  width:420px;
+}
+
+.coupons-row .column.last{background:none;}
+
+.coupon{
+  background:url("../images/backgrounds/marmol-texture.jpg") repeat-x;
+ 	 -webkit-border-radius:7px;
+	  -moz-border-radius:7px;
+	  border-radius:7px;
+  height:124px;
+  padding:20px;
+
+	position:relative;
+    behavior: url(PIE.htc);
+}
+
+
+.coupon.large{
+  height:78px;
+  margin:27px 0 30px;
+  position:relative;
+}
+
+.coupon.large h3{
+  width:640px;
+}
+.coupon.large p{
+  width:650px;
+}
+
+.coupon.large .btn{
+  margin-top:-22px;
+  position:absolute;
+  right:20px;
+  top:50%;
+}
+
+h3{
+  color:#59748C;
+  font-size:18px;
+  line-height:1.2;
+  margin-bottom:5px;
+  height:42px; /*ah*/
+}
+
+	h3 a { /*ah*/
+	  color:#59748C;
+	  text-decoration:underline!important;
+	}
+	
+	h3 a:hover { /*ah*/
+	  color:#6C8DAA;
+	  text-decoration:underline!important;
+	}
+	
+.moreFromStore a /* ah */
+{
+	font-size:11px;
+	color: #59748C;
+	float:left;
+	margin-top:27px;
+	text-decoration: underline!important;
+	max-width:220px; 
+}
+	.moreFromStore a:hover { color: #6C8DAA;} /* ah */
+	
+.moreFromStoreLarge a
+{
+	font-size:11px;
+	color: #59748C;
+	float:right;
+	margin-top:75px;
+	text-decoration: underline!important;
+	max-width:220px;
+}
+	.moreFromStoreLarge a:hover { color: #6C8DAA;} /* ah */
+
+
+.coupon p{
+  color:#59738C;
+  font-size:12px;
+  line-height:1.2;
+  height:29px; /* ah */
+}
+
+
+#content aside{
+  border-top:1px solid #6692A5;
+  border-bottom:1px solid #376071;
+}
+
+.middle-box{
+  padding:22px 40px 0 50px;
+  position:relative;
+}
+
+.middle-box .imageholder{
+  /*bottom:0; I think it looks better without this // ah */
+
+  float:left;
+  height:237px;
+  position:absolute;
+  width:402px;
+}
+
+.middle-box .imageholder img{
+  height:100%;
+  width:100%;
+}
+
+.middle-box .textholder{
+  float:right;
+  width:422px;
+  min-height:100px;
+}
+
+.middle-box h2{
+  color:#FFFFFF;
+  font-size:18px;
+  font-weight:normal;
+  line-height:1.8;
+}
+
+.middle-box p{
+  color:#FFFFFF;
+  font-size:12px;
+  font-weight:normal;
+  line-height:1.8;
+}
+
+.search-box{
+  overflow: hidden;
+  padding:37px 40px;
+
+	position:relative;
+	behavior: url(PIE.htc);
+}
+
+.ie7 .search-box{padding-bottom:34px !important;}
+
+.search-box .text{
+  background: #fff url("../images/icons/placeholders.png") 8px top no-repeat;
+  padding-left:53px !important;
+}
+
+/* Footer
+============================================================ */
+#footer{
+  background: #D6F0FB url("../images/backgrounds/clouds.png") top repeat-x;
+  padding-top:100px;
+  width:100%;
+}
+ #footer-stretch{
+  margin:0 auto 70px;
+  padding-left:30px;
+  width:910px;
+ }
+
+#footer h2{
+  color:#CF103D;
+  font-size:19px;
+  font-weight:bold;
+  line-height:-1.5;
+  margin-bottom:5px;
+}
+
+#footer nav ul{
+  float:left;
+  margin-right:15px;
+}
+
+#footer nav ul li{
+  border-bottom:1px dotted #CF103D;
+  padding:10px 0 7px;
+  width:135px;
+}
+
+#footer nav ul li:last-child{border:none;}
+
+#footer nav ul li a{
+  color:#CF103D;
+  font-size:13px;
+  font-weight:normal;
+  line-height:-1.5;
+  margin-bottom:15px;
+  text-decoration:none;
+}
+
+#footer nav ul li .social-link span{vertical-align: middle;}
+
+#footer nav ul li .social-link.twitter{color:#2C94C6;}
+#footer nav ul li .social-link.facebook{color:#254F95;}
+
+#footer nav ul li .social-link img{
+  vertical-align:middle;
+  width:17px;
+}
+
+#footer .copyright{
+  border-top:1px dotted #CF103D;
+  color:#CF103D;
+  font-size:12px;
+  margin:0 auto;
+  padding:15px 0 70px;
+  text-align:center;
+  width:480px;
+}
+
+/* Columns
+============================================================ */
+.column{
+  float:left;
+  margin-right:2%;
+  width:100%;
+}
+
+.column.last{margin-right:0;}
+
+.half{width:49%;}
+.third{width:32%;}
+.third.double{width:66%;}
+.fourth{width:23.5%;}
+.fourth.triple{width:74.5%;}
+.fifth{width:18.4%;}
+.fifth.double{width:38.8%;}
+.fifth.triple{width:59.2%;}
+.fifth.quadruple{width:79.6%;}
+
+/* Forms
+============================================================ */
+.field{margin-bottom:20px;}
+
+label{
+  display:block;
+  margin-bottom:10px;
+}
+
+label.inline{display:inline-block;}
+label.checkbox{cursor:pointer;}
+label.checkbox input,
+label.checkbox span{vertical-align:middle;}
+label.checkbox input{margin-right:5px;}
+
+.text{
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  box-sizing:border-box;
+  width:100%;
+}
+
+.ie7 .text{
+  width:90%;
+}
+
+.large-input{
+  float:left;
+  margin-right:10px;
+  width:720px;
+}
+
+.text{
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  border-radius:3px;
+  border:1px solid #ECEDED;
+  color:#A8A8A8;
+  float:left;
+  font-size:14px;
+  font-weight:normal;
+  line-height:1.2;
+  padding:13px 10px 14px;
+}
+
+.text::-webkit-input-placeholder {
+   color:#CACACA;
+   font-size:14px;
+   font-weight:normal;
+   line-height:1.2;
+}
+
+.text:-moz-placeholder {
+   color:#CACACA;
+   font-size:14px;
+   font-weight:normal;
+   line-height:1.2;
+}
+/* Buttons
+============================================================ */
+
+.btn{
+  background:url("../images/buttons/green.png") left -4px no-repeat;
+  display:inline-block;
+  padding-left:10px;
+}
+
+.btn span{
+  background:url("../images/buttons/green.png") right -4px no-repeat;
+  color:#fff;
+  display:inline-block;
+  font-size:16px;
+  line-height:1.2;
+  padding:11px 18px 11px 10px;
+  text-shadow:0 1px 0 #999;
+  text-shadow:0 1px 0 rgba(139, 60, 60, .55);
+}
+
+.btn:hover{background-position:left -54px;}
+.btn:hover span{background-position:right -54px;}
+
+.btn.red{
+  background:url("../images/buttons/red.png") left 0 no-repeat;
+  display:inline-block;
+  padding-left:10px;
+}
+
+.btn.red span{
+  background:url("../images/buttons/red.png") right 0 no-repeat;
+  color:#fff;
+  display:inline-block;
+  font-size:16px;
+  line-height:1.2;
+  padding:11px 18px 11px 10px;
+  text-shadow:0 1px 0 #999;
+  text-shadow:0 1px 0 rgba(139, 60, 60, .55);
+}
+
+.btn.red:hover{background-position:left -70px;}
+.btn.red:hover span{background-position:right -70px;}
+
+/*.btn:active{background-position:left -104px;}
+.btn:active span{background-position:right -104px;}*/
+
+.submit{
+  background:url("../images/buttons/lighter-green.png") top left no-repeat;
+  display:inline-block;
+  padding-left:6px;
+}
+
+
+.ie8 .submit input{float:right; padding:12px 33px 14px 30px;}
+
+.ie7 .submit{float:left; width:70px;}
+.ie7 .submit input{float:right; padding:10px 36px 11px 30px;}
+
+.submit input{
+  background:url("../images/buttons/lighter-green.png") top right no-repeat;
+  color:#fff;
+  display:inline-block;
+  font-family:"Myriad Pro", Arial, sans-serif;
+  font-size:17px;
+  line-height:1.2;
+  padding:15px 36px 10px 30px;
+  text-shadow:0 1px 0 #999;
+  text-shadow:0 1px 0 rgba(0, 0, 0, .30);
+}
+
+	
+
+/* PopUp
+============================================================ */
+
+.popup{background:#013E54;}
+
+.popup #wrapper{
+  background:#467B92;
+  padding:6px 7px;
+  margin-top:1px;
+}
+
+.popup .header{
+  background:#254D65;
+  color:#fff;
+  font-size:15px;
+  line-height:1.2;
+  padding:4px 0;
+  text-align:center;
+  text-shadow:0 1px 0 #666;
+  text-shadow:0 1px 0 rgba(0, 0, 0, .55);
+}
+
+.popup .header .company-name{color:#EDF000;}
+
+.popup .code-section{
+  background:#fff url("../images/backgrounds/guru-alone.png") 320px 15px no-repeat;
+  border-bottom:1px solid #EBEDED;
+
+  color:#467B92;
+  font-size:16px;
+
+  padding:27px 0 27px 40px;
+  font-weight:bold;
+  line-height:1;
+  text-shadow:0 1px 0 #CCC;
+  text-shadow:0 1px 0 rgba(255, 255, 255, .55);
+
+	height: 102px; /*ah*/
+}
+
+.popup .code-section .text-box{
+  float:left;
+  text-align:center;
+  width:270px;
+}
+
+
+
+.popup .code-section .code{
+  color:#254D65;
+  /* max font set to 86 in html doc/jquery as well */ font-size:86px; /* ah */ 
+}
+
+
+.popup .mail-section{
+  background:#fff url("../images/backgrounds/gray-effect.png") top no-repeat;
+  border-bottom:1px solid #749CAD;
+  border-top:1px solid #fff;
+  padding:13px 17px 12px;
+}
+
+
+.popup .mail-section .text{
+  background: #fff url("../images/icons/placeholders.png") 10px -46px no-repeat;
+  -webkit-box-shadow:1px 1px 0 #D1D1D1;
+  -moz-box-shadow:1px 1px 0 #D1D1D1;
+  box-shadow:1px 1px 0 #D1D1D1; /* from #EBEBEB */
+  margin-right:10px;
+  padding:7px 5px 6px 54px;
+  width:300px;
+}
+
+.popup .text::-webkit-input-placeholder {
+   color:#D1D1D1;
+}
+
+.popup .text:-moz-placeholder {
+   color:#D1D1D1;
+}
+
+.popup .submit{
+  background-position:bottom left; 
+  float:left; 
+  width:115px;
+}
+.popup .submit input{
+  background-position:bottom right;
+  float:right;
+  margin-top:1px;
+  padding: 7px 24px 5px 21px;
+  /*padding:7px 36px 5px 28px; changed word on btn from 'submit' to 'subscribe' */
+} 
+
+a{text-decoration:none !important;}
+
+
+
+.ie9.popup .submit input{ /*ah VV*/
+  padding:5px 20px 7px 19px !important;
+}
+
+.ie8.popup .submit input{
+  padding:5px 22px 7px 19px !important;
+}
+
+.ie7.popup .submit input{
+  margin-top:0px !important; 
+  padding:3px 24px 5px 23px !important;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!--[if IE]><![endif]-->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coupon Gurus</title>
+    <link href="images/favicon.png" rel="shortcut icon" />
+    <link href="stylesheets/global.css" rel="stylesheet" />
+    <script src="javascripts/modernizr.js"></script>
+    
+	    <script src="javascripts/jquery-textfill-0.1.js"></script>
+	    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+
+		<script src="javascripts/jquery-textfill-0.1.js"></script>
+		<script type="text/javascript">				
+			$(document).ready(function() {	//textfill call to resize font //ah
+			    $('.text-box').textfill({ maxFontPixels: 86 });	
+					//make the better used depending on code size //ah
+				var codeLen = jQuery('.code').text().length;
+				if(( codeLen > 0) && (codeLen < 6)) //font starts to shrink at 6
+				{
+					$('.paddingBuffer').css('padding-bottom', 0);
+				}
+				if(( codeLen > 6) && (codeLen < 15)) 
+				{
+					$('.paddingBuffer').css('padding-bottom', 8);
+				}
+				if( codeLen > 14) 
+				{
+					$('.paddingBuffer').css('padding-bottom', 24);
+				}
+
+			});	//ah
+		</script>
+
+  </head>
+
+<!--[if lte IE 6 ]> <body class="ie8 ie7 ie6 popup"> <![endif]-->
+  <!--[if lte IE 7 ]> <body class="ie8 ie7 popup"> <![endif]-->
+  <!--[if IE 8 ]> <body class="ie8 popup"> <![endif]-->
+  <!--[if IE 9 ]> <body class="ie9 popup"> <![endif]-->
+  <!--[if !(IE)]><!--> <body class="popup"> <!--<![endif]-->
+    <div id="wrapper">
+      <div class="header">Save 15% Site Wide with Code at <span class="company-name">123print</span></div>
+      <div class="code-section clearfix">
+        <div class="text-box">
+          <span class="code">wwhw</span>
+          <br />
+			<div class="paddingBuffer">
+			<!-- this is to put padding under the code if the font is small so it doesnt all look smooshed  // ah-->			
+			</div>
+          <span class="instructions">Enter code at checkout to save<span>
+        </div>
+      </div>
+      <div class="mail-section clearfix">
+        <input type="text" class="text" placeholder="Enter email for exclusive coupons" />
+        <div class="submit">
+          <input type="submit" value="Subscribe" /> 
+        </div><!-- submit-->
+      </div><!-- mail-section-->
+    </div><!-- wrapper-->
+	
+    <script>window.jQuery || document.write('<script src="javascripts/jquery.js">\x3C/script>')</script>
+    <!--[if (gte IE 6)&(lte IE 8)]>
+      <script src="javascripts/selectivizr.js"></script>
+    <![endif]-->
+    <script src="javascripts/global.js"></script>
+
+  </body>
+</html>
